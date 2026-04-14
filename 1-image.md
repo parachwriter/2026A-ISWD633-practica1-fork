@@ -29,7 +29,8 @@ docker images
 ```
 
 # COLOCAR UNA CAPTURA DE PANTALLA DEL RESULTADO 
-docker_images.png
+![Captura 1](docker_images.png)
+
 
 **Identificadores**
 
