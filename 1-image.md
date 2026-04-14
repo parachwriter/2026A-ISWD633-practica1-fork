@@ -29,6 +29,7 @@ docker images
 ```
 
 # COLOCAR UNA CAPTURA DE PANTALLA DEL RESULTADO 
+docker_images.png
 
 **Identificadores**
 
