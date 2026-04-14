@@ -3,24 +3,24 @@
 Descarga la última versión de la imagen disponible en el registro de Docker.
 
 ```
-docker pull <nombre imagen> 
+docker pull stirlingtools/stirling-pdf
 ```
 
 Descarga una versión específica de la imagen, cada imagen tiene etiquetas (tags) para diferentes versiones.
 Una imagen puede tener la etiqueta latest para representar la última versión, si no se especifica una etiqueta se hará referencia a la versión latest.
 
 ```
-docker pull <nombre imagen>:<tag>
+docker pull stirlingtools/stirling-pdf:alpha
 ```
 
 Descargar la imagen **hello-world**
-# COMPLETAR
+docker pull hello-world
 
 **¿Qué es nginx?**
-# COMPLETAR 
+Nginx es simplemente un servidor web (y proxy inverso) que se ejecuta dentro de un contenedor.
 
 Descargar la imagen  **nginx** en la versión **alpine**
-# COMPLETAR
+docker pull nginx:alpine-perl
 
 ### Listar imágenes
 
