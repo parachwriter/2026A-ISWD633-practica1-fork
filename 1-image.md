@@ -45,7 +45,8 @@ docker inspect <nombre imagen>:<tag>
 ```
 
 Inspeccionar la imagen hello-world 
-# COMPLETAR
+docker inspect hello-world
+![Captura 2](docker_inspect.png)
 
 **¿Con qué algoritmo se está generando el ID de la imagen**
 # COMPLETAR
@@ -53,6 +54,7 @@ Inspeccionar la imagen hello-world
 ### Filtrar imágenes
 
 ```
+docker images | grep <termino a buscar>
 docker images | grep <termino a buscar>
 
 ```
@@ -65,7 +67,13 @@ docker rmi <nombre imagen>:<tag>
 ```
 
 Eliminar la imagen hello-world 
-# COMPLETAR
+
+```
+docker rmi hello-world
+```
+
+![Captura 3](docker_rmi_hello-world.png)
+
 
 -f: Es la opción para forzar la eliminación de la imagen incluso si hay contenedores en ejecución que utilizan esa imagen.
 Cuando eliminas una imagen Docker, Docker no elimina automáticamente los contenedores que se han creado a partir de esa imagen. Esto significa que, aunque hayas eliminado la imagen, el contenedor seguirá ejecutándose normalmente.  
@@ -74,5 +82,5 @@ Eliminar una imagen no afecta a los contenedores que se han creado a partir de e
 Es una buena práctica detener y eliminar todos los contenedores que dependan de una imagen antes de eliminar la imagen en sí.
 
 ```
-docker rmi -f <nombre imagen>:<tag>
+docker rmi -f nginx:alpine-perl
 ```
