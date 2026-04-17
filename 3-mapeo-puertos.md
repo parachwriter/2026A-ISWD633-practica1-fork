@@ -11,9 +11,13 @@ docker run -d --name <nombre contenedor> -p <puerto host>:<puerto contenedor> <n
 
 ```
 Crear un contenedor a partir de la imagen nginx version alpine con el mapeo de puertos del ejemplo gráfico, host 3000 y contenedor 80
-# COMPLETAR
 
-# COLOCAR UNA CAPTURA DE PANTALLA  DEL ACCESO http://localhost:3000
+```
+PS C:\Users\Usuario> docker run -d --name srv-web3 -p 3000:80 nginx:alpine-perl
+1282d469d8269090779fc5538ecfa32b74c0fcb84ace67ea51c4d2fbc85ea9fd
+```
+
+![Captura 4](localhost.png)
 
 ### Para mapear más de un puerto
 
@@ -22,8 +26,10 @@ docker run -d --name <nombre contenedor> -p <puerto host 01>:<puerto contenedor 
 ```
 
 Crear un contenedor a partir de la imagen rabbitmq version management-alpine, para este mapeo de puertos usar en el host los mismos puertos del contenedor.
-# COMPLETAR
-
+```
+PS C:\Users\Usuario> docker run -d --name conejo -p 3002:80 -p 3003:80 rabbitmq:alpine
+c076ad1279eed49b627fb2e258854aa4fabc3e5b9c971b79b239df56c16aca47
+```
 ### Usando una forma más semántica cuando se especifican puertos
 
 ```
@@ -39,10 +45,14 @@ docker run -P -d --name <nombre contenedor> <nombre imagen>:<tag>
 **Recordar**
 No puedes mapear puertos a un contenedor existente directamente después de su creación con Docker. El mapeo de puertos debe especificarse en el momento de crear y ejecutar el contenedor.
 
-### Crear contenedor de Jenkins puertos contenedor: 8080 (interface web) y 50000 (comunicación entre nodos) imagen: jenkins/jenkins:alpine3.18-jdk11
-# COMPLETAR
+### Crear contenedor de Jenkins puertos contenedor: 8080 (interface web) y 50000 (comunicación entre nodos) imagen: jenkins/jenkins:lts
 
-# COLOCAR UNA CAPTURA DE PANTALLA  DEL ACCESO http://localhost:8080
+```
+PS C:\Users\Usuario> docker run -d --name jjk -p 8080:8080 -p 5000:50000 jenkins/jenkins:2.555.1-lts
+f3d9c7aa0386f476de9ec35788d9343851df154e3463939938bd49f86c3495e3
+```
+
+![Captura 5](jenkins.png)
 
 ### ¿Cómo obtener la contraseña solicitada?
 Para obtener la contraseña solicitada es necesario ingresar al contenedor.
