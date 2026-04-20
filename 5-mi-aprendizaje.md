@@ -1,5 +1,5 @@
 
-1. IMÁGENES EN DOCKER
+## 1. IMÁGENES EN DOCKER
 Las imágenes son plantillas de solo lectura usadas para crear contenedores.
 Descargar imágenes:
 docker pull <imagen>
@@ -24,7 +24,7 @@ docker rmi -f <imagen>
 Consideraciones:
 - No elimina contenedores existentes.
 - Se recomienda eliminar contenedores antes que imágenes.
-##2. CONTENEDORES
+## 2. CONTENEDORES
 Los contenedores son instancias en ejecución de una imagen.
 Crear contenedor (sin ejecutar):
 docker create --name <nombre> <imagen>:<tag>
@@ -46,7 +46,7 @@ docker rm <nombre>
 docker rm -f <nombre>
 Inspeccionar contenedor:
 docker inspect <nombre>
-##3. MAPEO DE PUERTOS
+## 3. MAPEO DE PUERTOS
 Permite acceder a servicios del contenedor desde el host.
 Mapear puertos:
 docker run -d -p <host>:<contenedor> <imagen>
@@ -60,7 +60,7 @@ Publicar puertos automáticamente:
 docker run -P -d <imagen>
 Importante:
 El mapeo de puertos solo se define al crear el contenedor.
-##4. OPERACIONES CON CONTENEDORES
+## 4. OPERACIONES CON CONTENEDORES
 Ejecutar comandos dentro de un contenedor:
 docker exec <contenedor> <comando>
 Ejemplo:
